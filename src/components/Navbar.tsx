@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from 'react';
-import { Menu, ShoppingCart, Search, X } from 'lucide-react';
+import { Menu, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -37,13 +36,10 @@ const Navbar = () => {
             </nav>
           )}
 
-          {/* Right Side - Search & Cart */}
+          {/* Right Side - Search & Menu */}
           <div className="flex items-center space-x-3">
             <Button variant="ghost" size="icon" aria-label="Search">
               <Search className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" aria-label="Cart">
-              <ShoppingCart className="h-5 w-5" />
             </Button>
             
             {/* Mobile Menu Button */}

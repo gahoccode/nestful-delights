@@ -1,4 +1,3 @@
-
 import { Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
@@ -13,10 +12,10 @@ const Footer = () => {
               Providing the finest quality edible bird's nest products, sourced sustainably and processed with care to maintain their natural benefits.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/trangtraisauhoang" className="text-white/70 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/trangtraisauhoang/" className="text-white/70 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-white/70 hover:text-white transition-colors">
@@ -71,7 +70,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/50 text-sm">
-          <p>© {new Date().getFullYear()} Nestful Delights. All rights reserved.</p>
+          <p> {new Date().getFullYear()} Nestful Delights. All rights reserved.</p>
         </div>
       </div>
     </footer>

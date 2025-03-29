@@ -1,3 +1,4 @@
+import * as React from "react";
 
 const AboutSection = () => {
   return (
@@ -21,17 +22,17 @@ const AboutSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-tr from-nest-200/20 to-gold-200/20 rounded-full blur-3xl opacity-70"></div>
             <div className="relative grid grid-cols-2 gap-6">
               <img 
-                src="/public/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png" 
+                src="/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png" 
                 alt="Natural bird's nest" 
                 className="rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 col-span-2"
               />
               <img 
-                src="/public/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png" 
+                src="/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png" 
                 alt="Premium bird's nest" 
                 className="rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
               />
               <img 
-                src="/public/lovable-uploads/2611ad15-9abc-4550-a339-d0b54d36aeb9.png" 
+                src="/lovable-uploads/2611ad15-9abc-4550-a339-d0b54d36aeb9.png" 
                 alt="Bird's nest with red dates" 
                 className="rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
               />
