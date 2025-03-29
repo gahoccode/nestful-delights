@@ -23,6 +23,13 @@ const products = [
     description: "Our signature processed bird's nest infused with nutritious red dates for an added boost of flavor and health benefits.",
     image: "/public/lovable-uploads/2611ad15-9abc-4550-a339-d0b54d36aeb9.png",
     price: "$99.99",
+  },
+  {
+    id: 4,
+    title: "Premium Bird's Nest with Goji Berry",
+    description: "Our premium bird's nest enhanced with antioxidant-rich goji berries, offering a delightful blend of traditional nutrition and modern wellness.",
+    image: "/public/placeholder.svg", // Replace with actual Goji Berry bird's nest image when available
+    price: "$109.99",
   }
 ];
 
