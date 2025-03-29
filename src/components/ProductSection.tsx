@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -20,7 +21,7 @@ const products = [
     id: 3,
     title: "Premium Bird's Nest with Goji Berry",
     description: "Our premium bird's nest enhanced with antioxidant-rich goji berries, offering a delightful blend of traditional nutrition and modern wellness.",
-    image: "/public/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png",
+    image: "/public/lovable-uploads/c218765e-71a4-43af-b65e-a489bb494c87.png",
     price: "$99.99",
   }
 ];
