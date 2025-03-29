@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -41,17 +41,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-serif font-medium mb-6">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="mr-3 h-5 w-5 text-gold-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/70">123 Bird's Nest Lane, Suite 456, San Francisco, CA 94107</span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="mr-3 h-5 w-5 text-gold-400" />
-                <span className="text-white/70">+1 (555) 123-4567</span>
-              </li>
               <li className="flex items-center">
                 <Mail className="mr-3 h-5 w-5 text-gold-400" />
-                <span className="text-white/70">info@nestfuldelights.com</span>
+                <span className="text-white/70">trangtraisauhoang@gmail.com</span>
               </li>
             </ul>
           </div>
