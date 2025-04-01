@@ -34,15 +34,15 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-lg mb-4">Newsletter</h4>
             <p className="text-white/80 mb-4">Subscribe for updates on new products and offers.</p>
-            <form className="flex flex-col sm:flex-row gap-3">
+            <form className="flex flex-col sm:flex-row gap-3 max-w-full">
               <input 
                 type="email" 
                 placeholder="Your email" 
-                className="px-4 py-2 rounded-md bg-nest-700/50 text-white border border-nest-600 focus:outline-none focus:ring-2 focus:ring-gold-300"
+                className="px-4 py-2 rounded-md bg-nest-700/50 text-white border border-nest-600 focus:outline-none focus:ring-2 focus:ring-gold-300 w-full"
               />
               <button 
                 type="submit" 
-                className="px-4 py-2 bg-gold-500 text-nest-800 rounded-md hover:bg-gold-400 transition-colors"
+                className="px-4 py-2 bg-gold-500 text-nest-800 rounded-md hover:bg-gold-400 transition-colors whitespace-nowrap flex-shrink-0"
               >
                 Subscribe
               </button>
