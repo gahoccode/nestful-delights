@@ -18,7 +18,11 @@ const Index = () => {
           <HeroSection />
           <section className="py-20 bg-secondary/30">
             <div className="container-custom">
-              <h2 className="text-3xl md:text-4xl font-serif font-medium mb-10 text-center">Our Photo Gallery</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4 text-center">Our Swiftlet Birds</h2>
+              <p className="text-center max-w-2xl mx-auto mb-10 text-muted-foreground">
+                Explore these beautiful swiftlets that produce the high-quality bird's nest used in our premium products. 
+                Our sustainable practices ensure these birds thrive in their natural habitat.
+              </p>
               <ThreeDPhotoCarouselDemo />
             </div>
           </section>
