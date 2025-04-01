@@ -1,5 +1,7 @@
+
 import * as React from "react";
 import { Check } from "lucide-react";
+import { useParallax } from 'react-scroll-parallax';
 
 const benefits = [
   "Supporting skin health and anti-aging",
@@ -11,51 +13,70 @@ const benefits = [
 ];
 
 const BenefitsSection = () => {
+  const imageParallax = useParallax<HTMLDivElement>({
+    speed: -10,
+    scale: [1, 1.1],
+    opacity: [0.8, 1],
+  });
+  
+  const contentParallax = useParallax<HTMLDivElement>({
+    speed: 10,
+  });
+
   return (
-    <section id="benefits" className="py-20 bg-secondary/30">
-      <div className="container-custom">
+    <section id="benefits" className="py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center_right,rgba(243,235,217,0.5),transparent_70%)]"></div>
+      
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-bl from-nest-200/30 to-gold-200/20 rounded-full blur-3xl opacity-70"></div>
-            <div className="grid grid-cols-2 gap-4 relative">
+          <div ref={imageParallax.ref} className="relative">
+            <div className="absolute -inset-8 bg-gradient-to-bl from-nest-200/30 to-gold-200/20 rounded-full blur-3xl opacity-70"></div>
+            <div className="relative grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img 
                   src="/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png" 
                   alt="Raw bird's nest" 
-                  className="w-full h-auto rounded-2xl shadow-lg transform -rotate-2"
+                  className="w-full h-auto rounded-2xl shadow-lg transform -rotate-2 hover:rotate-0 transition-all duration-700"
                 />
                 <img 
                   src="/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png" 
                   alt="Bird's nest close up" 
-                  className="w-full h-auto rounded-2xl shadow-lg transform rotate-2"
+                  className="w-full h-auto rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-all duration-700"
                 />
               </div>
               <div className="mt-12">
                 <img 
                   src="/lovable-uploads/96098727-e382-4518-8ada-7da7a635317e.png" 
                   alt="Bird's nest soup" 
-                  className="w-full h-auto rounded-2xl shadow-lg transform rotate-3"
+                  className="w-full h-auto rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-all duration-700"
                 />
               </div>
             </div>
           </div>
           
-          <div>
-            <h2 className="section-title">Health Benefits of Edible Bird's Nest</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Edible bird's nest has been valued for centuries for its numerous health benefits. Our products are rich in collagen, amino acids, and essential minerals, making them the perfect health supplement for all ages.
-            </p>
-            
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <div className="mr-3 mt-1 flex-shrink-0 bg-gold-400 rounded-full p-1">
-                    <Check className="h-4 w-4 text-white" />
-                  </div>
-                  <span className="text-foreground">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+          <div ref={contentParallax.ref}>
+            <div className="space-y-6">
+              <div className="inline-block py-1 px-3 rounded-full bg-gold-200 text-nest-800 text-sm font-medium">
+                Health Benefits
+              </div>
+              <h2 className="text-4xl font-serif font-medium mb-6 text-nest-800">
+                The Natural Power of Bird's Nest
+              </h2>
+              <p className="text-lg text-muted-foreground mb-10">
+                Edible bird's nest has been valued for centuries for its numerous health benefits. Our products are rich in collagen, amino acids, and essential minerals, making them the perfect health supplement for all ages.
+              </p>
+              
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="mr-3 flex-shrink-0 bg-gold-400 rounded-full p-1">
+                      <Check className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="text-foreground">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
