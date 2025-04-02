@@ -5,7 +5,7 @@ import ProductSection from "@/components/ProductSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/ui/footer-demo"; // Import the new footer
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ThreeDPhotoCarouselDemo } from "@/components/ThreeDPhotoCarouselDemo";
 
@@ -31,7 +31,7 @@ const Index = () => {
           <AboutSection />
           <CallToAction />
         </main>
-        <Footer />
+        <Footer /> {/* Using the new Footer component */}
       </div>
     </ParallaxProvider>
   );
