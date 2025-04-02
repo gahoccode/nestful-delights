@@ -60,6 +60,10 @@ This project is built with .
 - shadcn-ui
 - Tailwind CSS
 
+## Deployment
+
+This site is deployed to GitHub Pages using GitHub Actions. The deployment is configured to build from the main branch and deploy to the gh-pages branch.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/a92a8519-4d8b-42ac-a2a5-d878d4f11779) and click on Share -> Publish.
