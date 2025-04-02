@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -104,22 +103,12 @@ export default {
 				fadeIn: {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
-				},
-				'shimmer-slide': {
-					'0%': { transform: 'translateY(-100%)' },
-					'100%': { transform: 'translateY(100%)' }
-				},
-				'spin-around': {
-					'0%': { transform: 'rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fadeIn 0.5s ease-out forwards',
-				'shimmer-slide': 'shimmer-slide var(--speed) infinite',
-				'spin-around': 'spin-around 2s linear infinite'
+				'fade-in': 'fadeIn 0.5s ease-out forwards'
 			},
 			backgroundImage: {
 				'texture': "url('/public/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png')",
