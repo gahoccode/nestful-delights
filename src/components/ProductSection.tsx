@@ -1,26 +1,26 @@
-
 import * as React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useParallax } from 'react-scroll-parallax';
+import { getAssetPath } from "@/utils/assetPath";
 
 const products = [
   {
     id: 1,
     title: "Raw Edible Bird's Nest",
     description: "100% natural and unprocessed, hand-cleaned to maintain purity. Ideal for those who prefer traditional preparation.",
-    image: "/lovable-uploads/445e9f57-d7ae-4514-8e7d-cc7ecb8ead8c.png",
+    image: getAssetPath("/lovable-uploads/445e9f57-d7ae-4514-8e7d-cc7ecb8ead8c.png"),
   },
   {
     id: 2,
     title: "Processed Bird's Nest",
     description: "Ready-to-cook and easy to prepare, carefully cleaned and packaged for convenience while preserving natural taste and nutrients.",
-    image: "/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png",
+    image: getAssetPath("/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png"),
   },
   {
     id: 3,
     title: "Premium Bird's Nest with Goji Berry",
     description: "Our premium bird's nest enhanced with antioxidant-rich goji berries, offering a delightful blend of traditional nutrition and modern wellness.",
-    image: "/lovable-uploads/8a54e3e4-397c-481c-9361-65e7ad7b24de.png",
+    image: getAssetPath("/lovable-uploads/8a54e3e4-397c-481c-9361-65e7ad7b24de.png"),
   }
 ];
 
