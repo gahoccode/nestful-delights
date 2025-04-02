@@ -8,6 +8,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion"
+import { getAssetPath } from "@/utils/assetPath";
 
 export const useIsomorphicLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect
@@ -161,10 +162,10 @@ function ThreeDPhotoCarousel() {
   const controls = useAnimation()
   
   const birdImages = [
-    "/lovable-uploads/f93ac343-0833-4ae9-b752-0c965b2a5d27.png",
-    "/lovable-uploads/a6c42b7b-83bf-4bd2-a3d3-6a64ba7370a4.png",
-    "/lovable-uploads/6f733349-dbfc-4f1d-8e7c-afb7bf1e1caa.png",
-    "/lovable-uploads/8140f322-5a7d-4a2d-9ea3-2fbb94ee853e.png"
+    getAssetPath("/lovable-uploads/f93ac343-0833-4ae9-b752-0c965b2a5d27.png"),
+    getAssetPath("/lovable-uploads/a6c42b7b-83bf-4bd2-a3d3-6a64ba7370a4.png"),
+    getAssetPath("/lovable-uploads/6f733349-dbfc-4f1d-8e7c-afb7bf1e1caa.png"),
+    getAssetPath("/lovable-uploads/8140f322-5a7d-4a2d-9ea3-2fbb94ee853e.png")
   ]
   
   const cards = useMemo(() => birdImages, [])

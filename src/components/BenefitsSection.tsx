@@ -1,7 +1,7 @@
-
 import * as React from "react";
 import { Check } from "lucide-react";
 import { useParallax } from 'react-scroll-parallax';
+import { getAssetPath } from "@/utils/assetPath";
 
 const benefits = [
   "Supporting skin health and anti-aging",
@@ -34,21 +34,21 @@ const BenefitsSection = () => {
             <div className="relative grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img 
-                  src="/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png" 
-                  alt="Raw bird's nest" 
-                  className="w-full h-auto rounded-2xl shadow-lg transform -rotate-2 hover:rotate-0 transition-all duration-700"
+                  className="w-full h-auto object-cover rounded-lg shadow-lg"
+                  src={getAssetPath("/lovable-uploads/02c23252-51be-4e72-a052-6d3df7e62b6f.png")}
+                  alt="Bird's nest enhancing skin health" 
                 />
                 <img 
-                  src="/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png" 
-                  alt="Bird's nest close up" 
-                  className="w-full h-auto rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-all duration-700"
+                  className="w-full h-auto object-cover rounded-lg shadow-lg"
+                  src={getAssetPath("/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png")}
+                  alt="Bird's nest supporting immune system" 
                 />
               </div>
               <div className="mt-12">
                 <img 
-                  src="/lovable-uploads/96098727-e382-4518-8ada-7da7a635317e.png" 
-                  alt="Bird's nest soup" 
-                  className="w-full h-auto rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-all duration-700"
+                  className="w-full h-auto object-cover rounded-lg shadow-lg"
+                  src={getAssetPath("/lovable-uploads/96098727-e382-4518-8ada-7da7a635317e.png")}
+                  alt="Bird's nest promoting respiratory health" 
                 />
               </div>
             </div>

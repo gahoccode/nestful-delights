@@ -1,7 +1,7 @@
-
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { useParallax } from 'react-scroll-parallax';
+import { getAssetPath } from "@/utils/assetPath";
 
 const HeroSection = () => {
   const parallaxImage = useParallax<HTMLDivElement>({
@@ -42,7 +42,7 @@ const HeroSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-tr from-nest-300/20 to-gold-200/30 rounded-full blur-3xl opacity-70"></div>
             <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-700">
               <img 
-                src="/lovable-uploads/96098727-e382-4518-8ada-7da7a635317e.png" 
+                src={getAssetPath("/lovable-uploads/96098727-e382-4518-8ada-7da7a635317e.png")} 
                 alt="Premium bird's nest soup with visible strands" 
                 className="w-full h-auto object-cover aspect-square md:aspect-auto transform transition-transform duration-700"
               />

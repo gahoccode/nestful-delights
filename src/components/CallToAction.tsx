@@ -1,7 +1,7 @@
-
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { useParallax } from 'react-scroll-parallax';
+import { getAssetPath } from "@/utils/assetPath";
 
 const CallToAction = () => {
   const contentParallax = useParallax<HTMLDivElement>({
@@ -9,10 +9,15 @@ const CallToAction = () => {
     opacity: [0.8, 1],
   });
 
+  const bgImagePath = getAssetPath("/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png");
+
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-nest-500 to-nest-700 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png')] bg-cover bg-center opacity-10 z-0"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
+        style={{ backgroundImage: `url(${bgImagePath})` }}
+      ></div>
       
       <div className="container-custom relative z-10">
         <div ref={contentParallax.ref} className="text-center max-w-3xl mx-auto">
