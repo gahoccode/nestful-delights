@@ -1,23 +1,16 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { useParallax } from 'react-scroll-parallax';
+
 import { getAssetPath } from "@/utils/assetPath";
 
 const HeroSection = () => {
-  const parallaxImage = useParallax<HTMLDivElement>({
-    speed: -15,
-  });
-  
-  const contentParallax = useParallax<HTMLDivElement>({
-    speed: 10,
-    easing: 'easeInQuad',
-  });
+
 
   return (
     <section className="relative pt-32 pb-28 md:pt-40 md:pb-36 bg-gradient-to-b from-secondary/50 to-background overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div ref={contentParallax.ref} className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-8">
             <div className="space-y-4">
               <div className="inline-block py-1 px-3 rounded-full bg-nest-200/70 text-nest-800 text-sm font-medium">
                 Premium Quality
@@ -38,7 +31,7 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div ref={parallaxImage.ref} className="relative">
+          <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tr from-nest-300/20 to-gold-200/30 rounded-full blur-3xl opacity-70"></div>
             <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition-all duration-700">
               <img 

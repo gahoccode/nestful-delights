@@ -1,16 +1,9 @@
 import * as React from "react";
-import { useParallax } from 'react-scroll-parallax';
+
 import { getAssetPath } from "@/utils/assetPath";
 
 const AboutSection = () => {
-  const textParallax = useParallax<HTMLDivElement>({
-    speed: 5,
-  });
-  
-  const imagesParallax = useParallax<HTMLDivElement>({
-    speed: -10,
-    rotate: [0, 5],
-  });
+
 
   return (
     <section id="about" className="py-28 bg-secondary/40 relative overflow-hidden">
@@ -18,7 +11,7 @@ const AboutSection = () => {
       
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div ref={textParallax.ref}>
+          <div>
             <div className="inline-block py-1 px-3 rounded-full bg-nest-100 text-nest-800 text-sm font-medium mb-4">
               Our Story
             </div>
@@ -38,7 +31,7 @@ const AboutSection = () => {
             </div>
           </div>
           
-          <div ref={imagesParallax.ref} className="relative mt-10 lg:mt-0">
+          <div className="relative mt-10 lg:mt-0">
             <div className="absolute -inset-4 bg-gradient-to-tr from-nest-200/20 to-gold-200/20 rounded-full blur-3xl opacity-70"></div>
             <div className="relative grid grid-cols-2 gap-6">
               <img 

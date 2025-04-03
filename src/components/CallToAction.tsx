@@ -1,13 +1,9 @@
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { useParallax } from 'react-scroll-parallax';
+
 import { getAssetPath } from "@/utils/assetPath";
 
 const CallToAction = () => {
-  const contentParallax = useParallax<HTMLDivElement>({
-    speed: 10,
-    opacity: [0.8, 1],
-  });
 
   const bgImagePath = getAssetPath("/lovable-uploads/6f5b4f16-ff27-4615-9b53-e288ea081b61.png");
 
@@ -20,7 +16,7 @@ const CallToAction = () => {
       ></div>
       
       <div className="container-custom relative z-10">
-        <div ref={contentParallax.ref} className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-medium mb-6 text-white">
             Experience the Natural Goodness
           </h2>

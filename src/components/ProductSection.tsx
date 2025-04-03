@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { useParallax } from 'react-scroll-parallax';
+
 import { getAssetPath } from "@/utils/assetPath";
 
 const products = [
@@ -25,16 +25,13 @@ const products = [
 ];
 
 const ProductSection = () => {
-  const headerParallax = useParallax<HTMLDivElement>({
-    speed: 10,
-  });
 
   return (
     <section id="products" className="py-24 bg-secondary/30 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(243,235,217,0.5),transparent_70%)]"></div>
       
       <div className="container-custom relative z-10">
-        <div ref={headerParallax.ref} className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block py-1 px-3 rounded-full bg-nest-100 text-nest-800 text-sm font-medium mb-4">
             Our Selection
           </div>
@@ -48,17 +45,8 @@ const ProductSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product, index) => {
-            const productParallax = useParallax<HTMLDivElement>({
-              speed: 5,
-              translateY: ['-10px', '10px'],
-              scale: [0.98, 1.02],
-              easing: 'easeInOutQuad',
-              startScroll: 400,
-              endScroll: 800,
-            });
-            
             return (
-              <div ref={productParallax.ref} key={product.id}>
+              <div key={product.id}>
                 <Card className="overflow-hidden border border-border/50 rounded-xl shadow-md hover:shadow-xl transition-all duration-500 bg-white/80 backdrop-blur-sm h-full">
                   <div className="overflow-hidden h-[280px]">
                     <img 
